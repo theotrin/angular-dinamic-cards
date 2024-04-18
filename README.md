@@ -1,27 +1,61 @@
-# ProjectBinding
+# Projeto Angular Cards Dinâmicos
+Este é um projeto simples desenvolvido em Angular para demonstrar o uso de property binding e componentização na criação de cards dinâmicos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+## Descrição do Projeto
+O projeto consiste em criar dois cards dinâmicos que exibem informações específicas. Cada card é um componente Angular separado, permitindo uma abordagem modular e reutilizável.
 
-## Development server
+## Tecnologias Utilizadas
+- Angular: Framework JavaScript para construção de aplicativos web.
+- TypeScript: Linguagem de programação superset do JavaScript, utilizada para escrever código Angular.
+- HTML/SCSS: Linguagens de marcação e estilo para estruturação e design da interface do usuário.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalação
+Antes de iniciar, verifique se você possui o Node.js (versão 20 ou superior) e o Angular CLI (versão 17 ou superior) instalados em sua máquina.
 
-## Code scaffolding
+### Clone este repositório:
+```bash
+git clone https://github.com/theotrin/angular-dinamic-cards.git
+```
+Na pasta raiz do projeto basta digitar:
+```bash
+ng serve
+```
+E entrar no servidor local(geralmente é http://localhost:4200/) em seu navegador de prefêrencia.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Exemplo visual dos cards: 
+![image](https://github.com/theotrin/angular-dinamic-cards/assets/102327842/d58fd823-df67-448c-a18e-fce26d627e56)
 
-## Build
+## Componentes
+Card Component.
+<br/>
+O CardComponent exibe informações dinâmicas em um card.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Propriedades de Entrada
+- text: Texto do card.
+- price: Preço exibido no card.
+- color: Cor do card tendo como template as cores Laranja e Roxo.
 
-## Running unit tests
+### Exemplo de Uso
+```HTML
+<app-card
+[text]="'Completo'"
+[price]="250"
+[color]="'purple'" <!-- podendo escolher entre 'purple' e 'orange' exemplos visuais a cima... -->
+>
+</app-card>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# O que aprendi / o que esse projeto pode ajudar no mundo real?
 
-## Running end-to-end tests
+De forma resumida foi feito apenas um card que pode ser reutilizado usando property bind para mudar a cor dele com palavras reservadas no HTML: (orange e purple), o texto e botões tambem são customizáveis dentro do componente no projeto podendo de forma muito simples ser reutilizado em um site inteiro!.
+<br/> <br/>
+Este projeto demonstra como criar cards dinâmicos utilizando property binding e componentização no Angular. Sinta-se à vontade para explorar e modificar o código-fonte de acordo com suas necessidades.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Este projeto simples de cards dinâmicos pode ser útil em várias situações do mundo real. Aqui estão algumas maneiras de como ele poderia ser aplicado:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Dashboard Administrativo: Em um painel administrativo, os cards dinâmicos podem exibir informações como estatísticas de usuários, vendas, atividades recentes etc.
+Feed de Notícias Personalizado: Em um aplicativo de notícias, os cards dinâmicos podem ser usados para exibir artigos, vídeos ou atualizações personalizadas com base nos interesses do usuário.
+- Catálogo de Produtos: Em um site de comércio eletrônico, os cards dinâmicos podem ser usados para mostrar produtos em destaque, promoções ou recomendações personalizadas com base no histórico de compras do usuário.
+- Plataforma de Aprendizado Online: Em uma plataforma de aprendizado, os cards dinâmicos podem ser usados para exibir cursos recomendados, módulos recentemente adicionados ou atividades de aprendizado personalizadas.
+- Agenda de Eventos: Em um aplicativo de eventos, os cards dinâmicos podem ser usados para mostrar detalhes de eventos próximos, palestrantes, programação e opções de registro.
+Sistema de Gerenciamento de Tarefas: Em uma ferramenta de gerenciamento de tarefas, os cards dinâmicos podem exibir informações sobre as tarefas atribuídas, prazos de conclusão e prioridades.
